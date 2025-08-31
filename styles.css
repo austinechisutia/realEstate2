@@ -19,6 +19,12 @@ body{
       height: 100vh; /* full screen height */
       color: white;
     }
+
+    @media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* half of the screen height */
+  }
+}
     .hero::before {
       content: "";
       position: absolute;
