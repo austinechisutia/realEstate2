@@ -56,3 +56,22 @@ body{
     opacity: 1;
   }
 }
+
+@media (max-width: 960px) {
+  .fam-image {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .fam-image .side-image {
+    width: 100%; /* make image full width */
+    height: auto; /* keep proportions */
+  }
+}
+@media (min-width: 960px) {
+    
+  .fam-image .side-image {
+    width: 50vw; /* make image full width */
+    height: auto; /* keep proportions */
+  }
+}

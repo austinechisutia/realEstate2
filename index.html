@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Navbar with Menu Toggle</title>
   <!-- Bootstrap CSS -->
+   <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+  />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,28 +31,87 @@
   
 
   <!-- Collapsible menu items -->
-  <div class="collapse bg-dark border-top zoom-in" id="menuItems">
-    <ul class="nav flex-column p-3">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Contact</a>
-      </li>
-    </ul>
-  </div>
+<div class="collapse bg-dark border-top zoom-in" id="menuItems">
+  <ul class="nav flex-column p-3">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">Contact</a>
+    </li>
+  </ul>
+</div>
+
 
 
     <!-- Hero Section -->
   <section class="hero d-flex align-items-center justify-content-center text-center mt-3 mb-3 rounded-5 zoom-in">
     <div class="hero-content">
       <p class="display-3 fw-normal">We Build <span class="diffont fw-normal">Community;</span></p>
+    </div>
+  </section>
+
+    <!-- Two-column section -->
+  <section class="py-5 border-bottom border-1 border-dark mb-5 pb-3">
+    <div>
+      <div class="row">
+        <!-- Left part -->
+        <div class="col-md-6 text-start">
+          <h2 class="text-white fw-normal">Who We Are <i class="fa-sharp fa-thin fa-arrow-up-right" style="color: #ffffff;"></i></h2>
+         
+        </div>
+
+        <!-- Right part -->
+        <div class="col-md-6 text-start">
+          <p class="text-white">
+           
+                Austine is a <span class="diffont">Nairobi based</span>, locally owned, operated and privately held
+                real estate development group. We focus on multifamily, residential
+                housing, mixed-use, land, and retail developments throughout the state
+                of Nairobi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Second Section (with nested 3 parts) -->
+  <section class="py-5  border-bottom border-3 border-primary">
+    <div>
+      <div class="column align-items-center">
+        
+        <!-- Left side -->
+        <div class="col-md-6 text-start text-white">
+          <h2>Left Side Content</h2>
+         
+        </div>
+
+        <div class="mt-5 d-flex justify-content-between fam-image">
+            <div class="custom-text d-flex gap-5">
+                <div class="numeral text-white display-5 fw-normal">a.</div>
+                <div class="description d-flex flex-column gap-2">
+                    <p class="diffont fw-light display-3 text-white">Multi-Family</p>
+                    <p class="fw-normal text-white">See all Multi-Family</p>
+                </div>
+            </div>
+            <div class="side-image  h-50 ">
+                <img src="images/architecture and design.webp" class="img-fluid">
+            </div>
+        </div>
+
+
+
+
+        
+
+        </div>
+      </div>
     </div>
   </section>
 
