@@ -86,3 +86,8 @@ body{
 .font{
     font-size: 10px;
 }
+
+
+.map-container iframe {
+  filter: grayscale(100%) invert(1) contrast(90%);
+}
