@@ -87,7 +87,28 @@ body{
     font-size: 10px;
 }
 
+.emailing{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .map-container iframe {
   filter: grayscale(100%) invert(1) contrast(90%);
 }
+
+.text-image {
+    width: 50vw;
+    /* height: 400px;  remove unless required */
+}
+.text-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.custom-input::placeholder {
+  color: #6c757d; /* Bootstrap's muted gray */
+  opacity: 1;
+}
+
