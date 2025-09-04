@@ -1,18 +1,16 @@
-const numberrs = document.querySelectorAll(".numes");
+const counters = document.querySelectorAll(".numes")
 
-numberrs.forEach(numberr=>{
-    let value = 0;
-    
-    const numIncrease = parseInt(numberr.getAttributes("data-limit"))
+counters.forEach(counter => {
+  let iterator = 0;
+  const clasAll = parseInt(counter.getAttribute("data-limit"));
+  
+  let increse = setInterval(()=>{
+    iterator++;
+    counter.textContent = iterator + "+";
 
-    let interval = setInterval(()=>{
-        value++;
-        numIncrease.textContent = value;
+    if(iterator>=clasAll){
+        clearInterval(increse)
+    }
 
-        if(value>=numIncrease){
-            clearInterval(interval);
-        }
-    }, 1)
-
-
-})
+  })
+});
