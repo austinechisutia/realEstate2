@@ -1,4 +1,5 @@
-const counters = document.querySelectorAll(".numes")
+const nowVisible = ()=>{
+  const counters = document.querySelectorAll(".numes")
 
 counters.forEach(counter => {
   let iterator = 0;
@@ -14,3 +15,6 @@ counters.forEach(counter => {
 
   })
 });
+}
+
+
