@@ -1,13 +1,16 @@
-const display = document.querySelector(".numes");
-
+const counterNums =  document.querySelectorAll(".numes");
 
 let counter = 0;
 
-let interval = setInterval(()=>{
+let time = setInterval(() => {
   counter++;
-  display.textContent = counter;
 
-  if(counter>=250){
-    clearInterval(interval)
-  }
-}, 1)
+  counterNums.forEach(num =>{
+  num.textContent = counter;
+  
+})
+
+if(counter>=2000){
+  clearInterval(time)
+}
+}, 1);
