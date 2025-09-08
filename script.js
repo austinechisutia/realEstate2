@@ -1,12 +1,16 @@
-const nums = document.querySelector(".num-one");
+const nums = document.querySelectorAll(".num-one");
 
-let counter = 0;
+nums.forEach(num=>{
+  let counter = 0;
 
-let interval = setInterval(()=>{
-  counter++;
-  nums.textContent = counter + "+";
+  const limit = parseInt(num.getAttribute("data-attribute"));
 
-  if(counter>=250){
-    clearInterval(interval);
-  }
-}, 1)
+  let interval = setInterval(() => {
+    counter++;
+    num.textContent = counter + "+";
+
+    if(counter>=limit){
+      clearInterval(interval);
+    }
+  }, 1);
+})
