@@ -1,23 +1,26 @@
 const nums = document.querySelectorAll(".num-one");
 
-nums.forEach(num=>{
+
 let counter = 0;
+const totalDuration = 2000;
+const intervalTime = 10;
+const totalSteps = totalDuration/intervalTime;
 
-  const limit = parseInt(num.getAttribute("data-attribute"));
 
-  const ttlDurarion = 2000;
-  const intervalTime = 10;
-  const totalSteps = ttlDurarion/intervalTime;
-
-  let interval = setInterval(() => {
+nums.forEach(num=>{
+    let interval = setInterval(()=>{
     counter++;
+   
 
-    const progress = Math.min(Math.floor((limit/totalSteps)*counter), limit);
+    const atribute = parseInt(num.getAttribute("data-attribute"));
 
-    num.textContent = progress + "+";
 
-    if(counter>=limit){
+    const progress = Math.min(Math.floor((atribute/totalSteps)*counter), atribute);
+
+     num.textContent = progress + "+";
+
+    if(counter>=totalSteps){
       clearInterval(interval);
     }
-  }, intervalTime);
+  }, intervalTime)
 })
