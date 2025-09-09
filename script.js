@@ -7,17 +7,17 @@ const totalTime = totalDuration/timeInterval;
 nums.forEach(num=>{
   let counter = 0;
 
-  const dataAttribute = parseInt(num.getAttribute("data-attribute"));
+  const attribute = parseInt(num.getAttribute("data-attribute"));
 
   const interval = setInterval(()=>{
     counter++;
 
-    const progress = Math.min(Math.floor((dataAttribute/totalTime)*counter), dataAttribute);
+    const progress = Math.min(Math.floor((attribute/totalTime)*counter), attribute)
 
-    num.textContent = `${progress}+`;
-
-    if(counter>=totalTime){
-      clearInterval(interval)
-    }
+    num.textContent = `${progress}+`
   }, timeInterval)
+
+  if(counter>=totalTime){
+    clearInterval(interval)
+  }
 })
