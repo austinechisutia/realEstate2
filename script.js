@@ -2,21 +2,22 @@ const nums = document.querySelectorAll(".num-one");
 
 const totalDuration = 4000;
 const timeInterval = 10;
-const totalSteps = totalDuration/timeInterval;
+const totalTime = totalDuration/timeInterval;
 
 nums.forEach(num=>{
   let counter = 0;
 
-  const attributeValue = parseInt(num.getAttribute("data-attribute"));
+  const dataAttribute = parseInt(num.getAttribute("data-attribute"));
 
   const interval = setInterval(()=>{
     counter++;
-    const progress = Math.min(Math.floor((attributeValue/totalSteps)*counter), attributeValue)
 
-    num.textContent = `${progress}+`
+    const progress = Math.min(Math.floor((dataAttribute/totalTime)*counter), dataAttribute);
 
-    if(counter>= totalSteps){
+    num.textContent = `${progress}+`;
+
+    if(counter>=totalTime){
       clearInterval(interval)
     }
-  }, timeInterval)
+  })
 })
