@@ -19,5 +19,5 @@ nums.forEach(num=>{
     if(counter>=totalTime){
       clearInterval(interval)
     }
-  })
+  }, timeInterval)
 })
