@@ -7,7 +7,7 @@ const totalTime = totalDuration/timeInterval;
 nums.forEach(num=>{
   let counter = 0;
 
-  const attribute = parseInt(num.getAttribute("data-attribute"));
+  const attribute = parseInt(num.getAttribute("data-attribute"), 10);
 
   const interval = setInterval(()=>{
     counter++;
@@ -16,8 +16,8 @@ nums.forEach(num=>{
 
     num.textContent = `${progress}+`;
 
-    if(content=>totalTime){
-      clearInterval(attribute)
+    if(counter>=totalTime){
+      clearInterval(interval);
     }
   })
 })
