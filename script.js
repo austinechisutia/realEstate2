@@ -1,6 +1,6 @@
-const nums = document.querySelectorAll(".nums-one");
+const nums = document.querySelectorAll(".num-one");
 
-const totalDuration = 2000;
+const totalDuration = 4000;
 const totalTime = 10;
 const totalSteps = totalDuration/totalTime;
 
@@ -11,11 +11,11 @@ nums.forEach(num=>{
   const interval = setInterval(() => {
     counter++;
 
-    const progress = Math.min(Math.floor((targetValue/totalTime)*counter), totalDuration);
+    const progress = Math.min(Math.floor((targetValue/totalSteps)*counter), targetValue);
 
-    num.textContent = progress;
+    num.textContent = `${progress}+`;
 
-    if(counter>=targetValue){
+    if(counter>=totalSteps){
       clearInterval(interval)
     }
   }, totalTime);
