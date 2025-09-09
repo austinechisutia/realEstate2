@@ -12,12 +12,8 @@ nums.forEach(num=>{
   const interval = setInterval(()=>{
     counter++;
 
-    const progress = Math.min(Math.floor((attribute/totalTime)*counter), attribute)
+    const progress = Math.min(Math.floor((attribute/totalTime)*counter), attribute);
 
     num.textContent = `${progress}+`
-  }, timeInterval)
-
-  if(counter>=totalTime){
-    clearInterval(interval)
-  }
+  })
 })
